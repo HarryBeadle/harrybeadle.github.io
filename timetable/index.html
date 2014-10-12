@@ -1,18 +1,79 @@
 <html>
     <head>
         <title>Timetable</title>
+        <link rel="stylesheet" href="../styles/bootstrap.min.css">
+        <style>
+            td {text-align: center; width: 9%;}
+            th {text-align: center; width: 9%;}
+            body {width: 85%;margin: auto;}
+        </style>
     </head>
-    <style>
-        * {
-            font-family: Helvetica;
-            font-weight: lighter;
-        }
-        h2 {
-            padding: 0.6em;
-        }
-    </style>
     <body>
-        <h2>Harry Beadle's Timetable</h2>
-        <img src="timetable.png" width="100%">
+        <center><h2>Harry Beadle's Timetable</h2></center>
+        <table class="table table-bordered table-hover table-striped">
+            <tr>
+                <th>Day</th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td></td>
+                <td colspan="2">DT<br>Currigan<br>OM2</td>
+                <td>Physics<br>Grice<br>L13</td>
+                <td colspan="4"></td>
+                <td>Maths<br>Merritt<br>BL13</td>
+                <td>Maths<br>Brocklesby<br>BL16</td>
+                <td>Physics<br><i>Clinic</i><br>APL</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td colspan="2">Maths<br>Brocklesby<br>CH</td>
+                <td colspan="2"></td>
+                <td colspan="3"><br>Games</td>
+                <td></td>
+                <td colspan="2">DT<br>Currigan<br>DT1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td><br>Chapel</td>
+                <td>Maths<br>Merritt<br>BL13</td>
+                <td>Maths<br>Brocklesby<br>BL16</td>
+                <td>Tutor Period<br>Stafford<br>Montague</td>
+                <td colspan="2"></td>
+                <td>DT<br>Currigan<br>DT1</td>
+                <td colspan="2">Physics<br>Hivey<br>PLR</td>
+                <td></td>
+                <td>Maths<br>Klimentov<br>Abraham</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td><br>Sixth Form Assembly</td>
+                <td></td>
+                <td colspan="3">Physics<br>Grice<br>L13</td>
+                <td></td>
+                <td>DT<br>Currigan<br>DT1</td>
+                <td colspan="3"><br>Games</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td><br>House Assembly</td>
+                <td colspan="2">Maths<br>Merritt<br>BL</td>
+                <td colspan="2">DT<br>Currigan<br>DT1/L25</td>
+                <td colspan="2">Physics<br>Hivey<br>APL</td>
+                <td colspan="4"></td>
+            </tr>
+        </table>
     </body>
 </html>
