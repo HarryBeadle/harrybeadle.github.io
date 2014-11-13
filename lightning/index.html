@@ -41,7 +41,11 @@
                 text-decoration: underline;
             }
         </style>
+        <script type='application/javascript' src='fastclick.js'></script>
         <script>
+            window.addEventListener('load', function() {
+                FastClick.attach(document.body);
+            }, false);
             var i = 0;
             var inital_time = 0;
             function Click() {
