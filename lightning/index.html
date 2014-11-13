@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Lightning</title>
+        <style>
+            body {
+                background: rgb(165, 38, 77);
+                font-family: sans-serif;
+                color: white;
+            }
+            .btn {
+                width: 250px;
+                height: 250px;
+                background: none;
+                border: none;
+                background-image: url("assets/lightning.png");
+            }
+            .overlay {
+                color: white;
+                font-size: 32px;
+            }
+            .outer {
+                display: table;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+            .middle {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .inner {
+                margin-left: auto;
+                margin-right: auto; 
+            }
+            a {
+                color: #d0d0d0;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+        <script>
+            var i = 0;
+            var inital_time = 0;
+            function Click() {
+                if (i == 0) {
+                    document.getElementById("button").style.background = "url('assets/thunder.png')";
+                    document.getElementById("help").innerHTML = "when you hear thunder";
+                    inital_time = new Date().getTime()/1000;
+                    i = 1
+                } else if (i == 1) {
+                    document.getElementById("button").style.background = "url('assets/blank.png')";
+                    var distance = (331.1 * ((new Date().getTime()/1000)-inital_time)).toString()
+                    document.getElementById("distance").innerHTML = distance.substring(0, 5) + "m";
+                    document.getElementById("help").innerHTML = "to reset";
+                    i = 2
+                } else {
+                    document.getElementById("button").style.background = "url('assets/lightning.png')";
+                    document.getElementById("distance").innerHTML = "";
+                    document.getElementById("help").innerHTML = "when you see lightning";
+                    i = 0
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center><div class="outer"><div class="middle"><div class="inner">
+            <button id="button" class="btn" onclick="Click()">
+                <div id="distance" class="overlay"></div>
+            </button>
+            <p>
+                <b>Press the button <span id="help">when you see lightning</span>.</b><br>
+                <i>by <a href="http://www.harrybeadle.co.uk">Harry Beadle</a></i>
+            </p>
+            <div>
+                <a href="https://play.google.com/store/apps/details?id=appinventor.ai_harry_beadle.Lightning">
+                    <img alt="Android app on Google Play"
+                         src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
+                </a>
+            </div>
+        </center></div></div></div>
+    </body>
+</html>
