@@ -3,6 +3,7 @@
     <head>
         <title>Lightning</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <style>
             body {
                 background: rgb(165, 38, 77);
@@ -32,7 +33,7 @@
             }
             .inner {
                 margin-left: auto;
-                margin-right: auto; 
+                margin-right: auto;
             }
             a {
                 color: #d0d0d0;
@@ -40,6 +41,9 @@
             }
             a:hover {
                 text-decoration: underline;
+            }
+            #preload {
+                display: none;
             }
         </style>
         <script type='application/javascript' src='fastclick.js'></script>
@@ -71,6 +75,11 @@
         </script>
     </head>
     <body>
+        <div id="preload">
+            <img src="assets/lightning.png">
+            <img src="assets/blank.png">
+            <img src="assets/thunder.png">
+        </div>
         <div class="container">
             <center><div class="outer"><div class="middle"><div class="inner">
                 <button id="button" class="btn" onclick="Click()">
